@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Events - Gatherly.ph</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-100 flex flex-col min-h-screen">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 lg:px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-cyan-500">Gatherly.ph</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="browse-suppliers.html" class="text-gray-700 hover:text-teal-600 font-medium border-b-2 border-transparent pb-1">Browse Suppliers</a>
+                <a href="MyEvents.html" class="text-teal-600 font-medium border-b-2 border-teal-500 pb-1">My Events</a>
+                <a href="#" class="text-gray-700 hover:text-teal-600 font-medium border-b-2 border-transparent pb-1">For Suppliers</a>
+                <a href="#" class="text-gray-700 hover:text-teal-600 font-medium border-b-2 border-transparent pb-1">Blog</a>
+                <a href="#" class="text-gray-700 hover:text-teal-600 font-medium border-b-2 border-transparent pb-1">Help</a>
+            </div>
+            <div class="flex items-center space-x-3">
+                 <button class="text-gray-600 hover:text-teal-600 p-2 rounded-full hover:bg-gray-100" aria-label="Wishlist" onclick="location.href='#'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
+                <div class="relative dropdown">
+                    <button class="flex items-center space-x-2 p-2 rounded-full hover:bg-gray-100">
+                        <img src="https://placehold.co/32x32/ccfbf1/115e59?text=U" alt="User Avatar" class="w-8 h-8 rounded-full border-2 border-teal-200">
+                        <span class="text-sm font-medium text-gray-700 hidden sm:inline">My Account</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down text-gray-500"><path d="m6 9 6 6 6-6"/></svg>
+                    </button>
+                    <div class="dropdown-menu absolute right-0 mt-2 w-48 bg-white rounded-md shadow-xl z-20 py-1 hidden">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-600">My Profile</a>
+                        <a href="MyEvents.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-600">My Events</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-600">Settings</a>
+                        <hr class="my-1">
+                        <a href="#" class="block px-4 py-2 text-sm text-red-600 hover:bg-red-50">Sign Out</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 lg:px-6 py-12 flex-grow">
+
+        <div class="mb-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <h1 class="text-3xl lg:text-4xl font-bold text-gray-800">My Events</h1>
+            <a href="CreateAnEvent.html" class="px-5 py-2.5 text-sm font-semibold text-white btn-gradient rounded-lg shadow-sm hover:shadow-md flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-circle"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="16"/><line x1="8" x2="16" y1="12" y2="12"/></svg>
+                <span>Create New Event</span>
+            </a>
+        </div>
+
+        <section class="space-y-6">
+
+            <div class="bg-white rounded-xl shadow-md p-5 border-l-4 border-teal-500 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 hover:shadow-lg transition duration-200">
+                <div>
+                    <h2 class="text-xl font-semibold text-gray-800 mb-1">John & Jane's Wedding</h2>
+                    <p class="text-sm text-gray-500 flex items-center gap-3">
+                        <span class="flex items-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tag"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.432 0l6.568-6.568a2.426 2.426 0 0 0 0-3.432l-8.704-8.704Z"/><path d="M6 9h.01"/></svg>
+                            Wedding
+                        </span>
+                        <span class="flex items-center gap-1">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-days"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
+                            October 26, 2025 (Placeholder Date)
+                        </span>
+                    </p>
+                </div>
+                <div class="flex-shrink-0">
+                    <a href="#" class="px-4 py-2 text-sm font-semibold text-gray-700 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200">
+                        View Organizer
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md p-5 border-l-4 border-cyan-500 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 hover:shadow-lg transition duration-200">
+                <div>
+                    <h2 class="text-xl font-semibold text-gray-800 mb-1">Sarah's 30th Birthday</h2>
+                    <p class="text-sm text-gray-500 flex items-center gap-3">
+                        <span class="flex items-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tag"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.432 0l6.568-6.568a2.426 2.426 0 0 0 0-3.432l-8.704-8.704Z"/><path d="M6 9h.01"/></svg>
+                            Birthday Party
+                        </span>
+                         <span class="flex items-center gap-1">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-days"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
+                            August 15, 2025 (Placeholder Date)
+                        </span>
+                    </p>
+                </div>
+                 <div class="flex-shrink-0">
+                     <a href="#" class="px-4 py-2 text-sm font-semibold text-gray-700 bg-gray-100 border border-gray-300 rounded-full hover:bg-gray-200">
+                        View Organizer
+                    </a>
+                </div>
+            </div>
+
+             </section>
+
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 pt-16 pb-8 mt-auto">
+        <div class="container mx-auto px-4 lg:px-6">
+             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-10 mb-10">
+                <div class="col-span-2 lg:col-span-1">
+                     <a href="index.html" class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400 mb-4 inline-block">Gatherly.ph</a>
+                     <p class="text-sm mb-4">Connecting you with the best event suppliers in the Philippines.</p>
+                     <div class="flex space-x-4">
+                         <a href="#" class="text-gray-400 hover:text-white" aria-label="Facebook"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg> </a>
+                         <a href="#" class="text-gray-400 hover:text-white" aria-label="Instagram"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg> </a>
+                         <a href="#" class="text-gray-400 hover:text-white" aria-label="TikTok"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> </a>
+                     </div>
+                 </div>
+                <div> <h5 class="font-semibold text-white mb-4">Explore</h5> <ul class="space-y-2"> <li><a href="browse-suppliers.html" class="hover:text-teal-400 text-sm">Browse Suppliers</a></li> <li><a href="#" class="hover:text-teal-400 text-sm">Packages & Deals</a></li> <li><a href="#" class="hover:text-teal-400 text-sm">Inspiration Blog</a></li> <li><a href="#" class="hover:text-teal-400 text-sm">Event Types</a></li> </ul> </div>
+                <div> <h5 class="font-semibold text-white mb-4">For Clients</h5> <ul class="space-y-2"> <li><a href="#" class="hover:text-teal-400 text-sm">How It Works</a></li> <li><a href="#" class="hover:text-teal-400 text-sm">Sign Up</a></li> <li><a href="#" class="hover:text-teal-400 text-sm">Sign In</a></li> <li><a href="#" class="hover:text-teal-400 text-sm">Help Center</a></li> </ul> </div>
+                <div> <h5 class="font-semibold text-white mb-4">For Suppliers</h5> <ul class="space-y-2"> <li><a href="#" class="hover:text-teal-400 text-sm">List Your Business</a></li> <li><a href="#" class="hover:text-teal-400 text-sm">Supplier Login</a></li> <li><a href="#" class="hover:text-teal-400 text-sm">Benefits</a></li> <li><a href="#" class="hover:text-teal-400 text-sm">Supplier FAQs</a></li> </ul> </div>
+                <div> <h5 class="font-semibold text-white mb-4">Company</h5> <ul class="space-y-2"> <li><a href="#" class="hover:text-teal-400 text-sm">About Us</a></li> <li><a href="#" class="hover:text-teal-400 text-sm">Contact Us</a></li> <li><a href="#" class="hover:text-teal-400 text-sm">Privacy Policy</a></li> <li><a href="#" class="hover:text-teal-400 text-sm">Terms of Service</a></li> </ul> </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-sm"> &copy; 2025 Gatherly.ph. All rights reserved. Crafted with ❤️ in the Philippines. </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

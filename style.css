@@ -1,0 +1,141 @@
+/* General body styling */
+body {
+    font-family: 'Inter', sans-serif; /* Use Inter font */
+    scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
+    -webkit-font-smoothing: antialiased; /* Improve font rendering on WebKit */
+    -moz-osx-font-smoothing: grayscale; /* Improve font rendering on Firefox */
+}
+
+/* Gradient button styles - UPDATED TO TEAL GLOBALLY */
+.btn-gradient {
+    background-image: linear-gradient(to right, #2dd4bf, #14b8a6); /* teal-400 to teal-500 */
+    transition: background-image 0.3s ease; /* Smooth transition for gradient change */
+}
+.btn-gradient:hover {
+    background-image: linear-gradient(to right, #14b8a6, #0d9488); /* teal-500 to teal-600 */
+}
+
+/* Global transition for elements */
+* {
+    transition: all 0.2s ease-in-out; /* Apply a subtle transition to most elements */
+}
+
+/* Simple dropdown style (Desktop hover & Mobile click handled by JS) */
+@media (min-width: 768px) { /* Apply hover effect only on md screens and up */
+    .dropdown:hover .dropdown-menu {
+        display: block; /* Show menu on hover */
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-menu {
+    display: none; /* Initially hidden, JS will manage block/none for mobile */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px); /* Start slightly above for animation for hover */
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+
+/* Custom scrollbar styling (Optional, can be used where needed) */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1; /* gray-100 */
+    border-radius: 3px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #d1d5db; /* gray-300 */
+    border-radius: 3px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af; /* gray-400 */
+}
+
+/* Styles for the drop zone (Potentially for future drag-and-drop features) */
+.drop-zone {
+    min-height: 80px; /* Ensure drop zone has some height */
+    border: 2px dashed #d1d5db; /* border-gray-300 */
+    border-radius: 0.5rem; /* rounded-lg */
+    background-color: #f9fafb; /* bg-gray-50 */
+    padding: 0.75rem; /* p-3 */
+    margin-top: 0.5rem; /* mt-2 */
+    transition: background-color 0.2s ease;
+}
+/* Style when dragging over a drop zone - UPDATED TO TEAL TINT */
+.drop-zone.drag-over {
+    background-color: #f0fdfa; /* bg-teal-50 */
+    border-color: #5eead4; /* border-teal-300 */
+}
+
+
+/* Style for draggable supplier card (Potentially for future drag-and-drop features) */
+.supplier-draggable-card {
+    cursor: grab; /* Indicate draggable */
+    border: 1px solid #e5e7eb; /* border-gray-200 */
+    background-color: white;
+    padding: 0.5rem; /* p-2 */
+    border-radius: 0.375rem; /* rounded-md */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* space-x-2 */
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); /* shadow-sm */
+}
+.supplier-draggable-card:active {
+    cursor: grabbing; /* Change cursor while dragging */
+    opacity: 0.8; /* Slightly transparent when active */
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* shadow-md */
+}
+/* Style for the original card being dragged */
+.dragging {
+    opacity: 0.5;
+    border: 1px dashed #9ca3af; /* gray-400 */
+}
+/* Hide empty paragraph in drop zone if it has children */
+.drop-zone:has(.supplier-draggable-card) .empty-drop-zone-text {
+    display: none;
+}
+
+/* Styles for Index.html Hero Section */
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Optional overlay for background images if needed */
+.hero-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+    z-index: 1; /* Ensure overlay is above the image but below content */
+}
+
+/* Height adjustment for Index.html main content area to push footer down */
+.main-content-area {
+    min-height: calc(100vh - 14rem); /* Adjust 14rem based on actual combined header/footer height */
+}
+
+/* Styles specific to browse-suppliers.html */
+/* Removed empty ruleset as it was not used */
+
+/* Add focus ring styles for better accessibility */
+*:focus-visible {
+    outline: 2px solid #2dd4bf; /* teal-400 */
+    outline-offset: 2px;
+    border-radius: 2px; /* Optional: makes the focus ring match rounded corners */
+}
+/* Style selects specifically as focus-visible might not apply directly */
+select:focus {
+     outline: 2px solid #2dd4bf; /* teal-400 */
+     outline-offset: 2px;
+     border-radius: 2px;
+}
